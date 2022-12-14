@@ -7,10 +7,10 @@ import { Product, products } from '../products';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
-  @Input() product?: Product;
+  @Input() product!: Product;
 
   get name(): string {
-    return this.product?.name ?? '';
+    return this.product.name;
   }
 
   get linkTitle(): string {
@@ -19,5 +19,11 @@ export class ProductComponent {
 
   fire(name: string) {
     alert(name);
+  }
+
+  onNotify(currentPrice: number) {
+    alert(
+      `Current price is ${currentPrice}, you will be notified when the product goes on sale`
+    );
   }
 }

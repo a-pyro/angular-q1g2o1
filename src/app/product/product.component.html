@@ -2,6 +2,11 @@
   <a [title]="linkTitle">{{ name }}</a>
 </h3>
 
-<p *ngIf="product?.description">{{ product?.description }}</p>
+<p *ngIf="product.description">{{ product.description }}</p>
 
 <button (click)="fire(name)">Fire me 🔥</button>
+
+<app-product-alerts
+  (notify)="onNotify($event)"
+  [product]="product"
+></app-product-alerts>
