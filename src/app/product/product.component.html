@@ -1,0 +1,7 @@
+<h3>
+  <a [title]="linkTitle">{{ name }}</a>
+</h3>
+
+<p *ngIf="product?.description">{{ product?.description }}</p>
+
+<button (click)="fire(name)">Fire me 🔥</button>
