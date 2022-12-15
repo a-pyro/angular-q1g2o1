@@ -1,10 +1,9 @@
 <h3>
-  <a [title]="linkTitle">{{ name }}</a>
+  <a [title]="linkTitle" [routerLink]="['/products', product.id]">{{ name }}</a>
 </h3>
-
 <p *ngIf="product.description">{{ product.description }}</p>
 
-<button (click)="fire(name)">Fire me 🔥</button>
+<button (click)="fire(name)">{{ product.price }}🔥</button>
 
 <app-product-alerts
   (notify)="onNotify($event)"
