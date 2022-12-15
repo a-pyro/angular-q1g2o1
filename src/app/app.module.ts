@@ -10,9 +10,17 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { ProductListComponent } from './components/product-list/product-list.component'
 import { ProductComponent } from './components/product/product.component'
 import { TopBarComponent } from './components/top-bar/top-bar.component'
+import { CartComponent } from './components/cart/cart.component'
+import { HttpClientModule } from '@angular/common/http';
+import { ShippingComponent } from './components/shipping/shipping.component'
 
 @NgModule({
-  imports: [BrowserModule, ReactiveFormsModule, RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+  ],
   declarations: [
     AppComponent,
     TopBarComponent,
@@ -20,6 +28,8 @@ import { TopBarComponent } from './components/top-bar/top-bar.component'
     ProductComponent,
     ProductAlertsComponent,
     ProductDetailComponent,
+    CartComponent,
+    ShippingComponent,
   ],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,8 @@
+<h2>Your cart: {{ items.length || 'empty' }}</h2>
+
+<div>
+  <li class="cart-item" *ngFor="let item of items">
+    {{ item.name }} - {{ item.price | currency : 'USD' : true : '1.2-2' }}
+  </li>
+</div>
+<button routerLink="/shipping">Shipping Prices</button>
