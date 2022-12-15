@@ -3,7 +3,7 @@
 </h3>
 <p *ngIf="product.description">{{ product.description }}</p>
 
-<button (click)="fire(name)">{{ product.price }}🔥</button>
+<button class="fancy-button" (click)="fire(name)">{{ product.price }}🔥</button>
 
 <app-product-alerts
   (notify)="onNotify($event)"

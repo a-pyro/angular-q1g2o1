@@ -8,7 +8,7 @@ import { CartService } from 'src/app/services/cart.service'
   styleUrls: ['./shipping.component.css'],
 })
 export class ShippingComponent {
-  shippingCosts!: Observable<{ type: string; price: number }[]>
+  shippingCosts!: Observable<{ icon: string; type: string; price: number }[]>
 
   constructor(private cartService: CartService) {}
 

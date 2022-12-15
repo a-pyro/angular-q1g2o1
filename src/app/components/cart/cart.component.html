@@ -5,4 +5,17 @@
     {{ item.name }} - {{ item.price | currency : 'USD' : true : '1.2-2' }}
   </li>
 </div>
-<button routerLink="/shipping">Shipping Prices</button>
+<a routerLink="/shipping">Shipping Prices</a>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name"> Name </label>
+    <input type="text" formControlName="name" />
+  </div>
+
+  <div>
+    <label for="address"> Address </label>
+    <input type="text" formControlName="address" />
+  </div>
+  <button class="fancy-button" type="submit">Purchase</button>
+</form>
